@@ -1,8 +1,10 @@
-FROM eclipse-mosquitto:20
+FROM openjdk:22-slim
 
 LABEL author="Cristian Infante"
 
-COPY target/Hangman-0.0.1-SNAPSHOT.jar Hangman.jar
+COPY target/Hangman-0.0.1-SNAPSHOT.jar /app/Hangman.jar
 
-ENTRYPOINT ["java","-jar","Hangman.jar"]
+EXPOSE 8082
+
+ENTRYPOINT ["java","-jar","/app/Hangman.jar"]
 
