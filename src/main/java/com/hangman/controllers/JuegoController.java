@@ -85,7 +85,15 @@ public class JuegoController {
             }
 
             // Verificar si es el turno del jugador actual
-            if (esTurnoDelJugador(juego)) {
+            if (juego.isPerdida()) {
+                pasarAlSiguienteJugador();
+                return "¡Lo siento, " + nombreJugador + "! Has perdido. Comienza una nueva ronda.";
+            }
+            else if (juego.isAdivinada()) {
+                pasarAlSiguienteJugador();
+                return "¡Felicidades, " + nombreJugador + "! Has ganado. Comienza una nueva ronda.";
+            }
+            else if (esTurnoDelJugador(juego)) {
                 if (intento.length() == 1) {
                     char letra = intento.charAt(0);
 
