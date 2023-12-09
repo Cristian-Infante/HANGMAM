@@ -21,4 +21,7 @@ When the user requests the status of the game, the system must validate that the
 ## Docker
 - Build: ```docker build -t hangman:1.0 .```
 - Run: ```docker run -p8082:8082 --name hangman hangman:1.0```
-- Link: ```bash http://localhost:8082/swagger-ui/index.html```
+- Link: 
+```bash 
+http://localhost:8082/swagger-ui/index.html
+```
