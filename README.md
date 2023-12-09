@@ -8,10 +8,10 @@
 - Game/guess: Allows you to make an attempt to guess the word, example: http://localhost:8082/Game/guess?nombreJugador=Cristian&intento=a
 - Game/status: Allows you to obtain the current state of the game, example: http://localhost:8082/Game/status
 
-## Generate jar
-- mvn clean package
+## Jar
+- Generate: ```mvn clean package```
 
 ## Docker
-- Build: docker build -t hangman:1.0 .
-- Run: docker run -p8082:8082 --name hangman hangman:1.0
+- Build: ```docker build -t hangman:1.0 .```
+- Run: ```docker run -p8082:8082 --name hangman hangman:1.0```
 - Link: http://localhost:8082/swagger-ui/index.html
